@@ -1,5 +1,7 @@
 <html>
-  <head></head>
+  <head>
+    <title>COCKTAILS LIST</title>
+  </head>
   <body>
     <div id="leftColumn">
       <p onclick="showCreator()">Martini (CLICK TO SELECT VARIANT)</p>
@@ -344,13 +346,13 @@
   </body>
   <style>
     :root {
-  --greenDark: #003406;
-  --greenMid: #076d0d;
-  --greenLight: #00b809;
-  --greenFlash: #00ff00;
-  --redLight: #d70000;
-  --white: #ffffff;
-}
+      --greenDark: #003406;
+      --greenMid: #076d0d;
+      --greenLight: #00b809;
+      --greenFlash: #00ff00;
+      --redLight: #d70000;
+      --white: #ffffff;
+    }
     div {
       border: 0px solid black;
     }
@@ -371,6 +373,9 @@
       grid-auto-flow: row;
       grid-template-areas:
         "a b";
+    }
+    .leftColumn {
+      font-size: 20px;
     }
     .base, .ratio, .reverse, .sweetness, .dirty {
       background: var(--greenMid);
@@ -462,2439 +467,2439 @@
   </style>
   <script>
     let martinis = [
-  {
-    "name": "50:50 Martini",
-    "base": "Gin",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty 50:50 Martini",
-    "base": "Gin",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect 50:50 Martini",
-    "base": "Gin",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect 50:50 Martini",
-    "base": "Gin",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet 50:50 Martini",
-    "base": "Gin",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet 50:50 Martini",
-    "base": "Gin",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Wet Martini",
-    "base": "Gin",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Martini",
-    "base": "Gin",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Dry Martini",
-    "base": "Gin",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Montgomery Martini",
-    "base": "Gin",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Extra Dry Martini",
-    "base": "Gin",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Churchill Martini",
-    "base": "Gin",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "50:50 Vodka Martini",
-    "base": "Vodka",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty 50:50 Vodka Martini",
-    "base": "Vodka",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect 50:50 Vodka Martini",
-    "base": "Vodka",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect 50:50 Vodka Martini",
-    "base": "Vodka",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet 50:50 Vodka Martini",
-    "base": "Vodka",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet 50:50 Vodka Martini",
-    "base": "Vodka",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Wet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Vodka Martini",
-    "base": "Vodka",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Montgomery Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Extra Dry Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Churchill Vodka Martini",
-    "base": "Vodka",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "50:50 Tequini",
-    "base": "Tequila",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty 50:50 Tequini",
-    "base": "Tequila",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect 50:50 Tequini",
-    "base": "Tequila",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect 50:50 Tequini",
-    "base": "Tequila",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet 50:50 Tequini",
-    "base": "Tequila",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet 50:50 Tequini",
-    "base": "Tequila",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Wet Tequini",
-    "base": "Tequila",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Tequini",
-    "base": "Tequila",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Montgomery Tequini",
-    "base": "Tequila",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Extra Dry Tequini",
-    "base": "Tequila",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Churchill Tequini",
-    "base": "Tequila",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "50:50 Rum Martini",
-    "base": "Rum",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty 50:50 Rum Martini",
-    "base": "Rum",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect 50:50 Rum Martini",
-    "base": "Rum",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect 50:50 Rum Martini",
-    "base": "Rum",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet 50:50 Rum Martini",
-    "base": "Rum",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet 50:50 Rum Martini",
-    "base": "Rum",
-    "ratio": "50:50",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Wet Rum Martini",
-    "base": "Rum",
-    "ratio": "Wet",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Rum Martini",
-    "base": "Rum",
-    "ratio": "",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Montgomery Rum Martini",
-    "base": "Rum",
-    "ratio": "Montgomery",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": false,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Extra Dry Rum Martini",
-    "base": "Rum",
-    "ratio": "Extra Dry",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  },
-  {
-    "name": "Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": false,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Reverse Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Reverse Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "",
-    "dirty": true
-  },
-  {
-    "name": "Perfect Reverse Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Perfect Reverse Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Perfect",
-    "dirty": true
-  },
-  {
-    "name": "Sweet Reverse Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": false
-  },
-  {
-    "name": "Dirty Sweet Reverse Churchill Rum Martini",
-    "base": "Rum",
-    "ratio": "Churchill",
-    "reverse": true,
-    "sweetness": "Sweet",
-    "dirty": true
-  }
-]
+      {
+        "name": "50:50 Martini",
+        "base": "Gin",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty 50:50 Martini",
+        "base": "Gin",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect 50:50 Martini",
+        "base": "Gin",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect 50:50 Martini",
+        "base": "Gin",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet 50:50 Martini",
+        "base": "Gin",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet 50:50 Martini",
+        "base": "Gin",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Wet Martini",
+        "base": "Gin",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Martini",
+        "base": "Gin",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Dry Martini",
+        "base": "Gin",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Montgomery Martini",
+        "base": "Gin",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Extra Dry Martini",
+        "base": "Gin",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Churchill Martini",
+        "base": "Gin",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "50:50 Vodka Martini",
+        "base": "Vodka",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty 50:50 Vodka Martini",
+        "base": "Vodka",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect 50:50 Vodka Martini",
+        "base": "Vodka",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect 50:50 Vodka Martini",
+        "base": "Vodka",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet 50:50 Vodka Martini",
+        "base": "Vodka",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet 50:50 Vodka Martini",
+        "base": "Vodka",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Wet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Vodka Martini",
+        "base": "Vodka",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Montgomery Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Extra Dry Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Churchill Vodka Martini",
+        "base": "Vodka",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "50:50 Tequini",
+        "base": "Tequila",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty 50:50 Tequini",
+        "base": "Tequila",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect 50:50 Tequini",
+        "base": "Tequila",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect 50:50 Tequini",
+        "base": "Tequila",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet 50:50 Tequini",
+        "base": "Tequila",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet 50:50 Tequini",
+        "base": "Tequila",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Wet Tequini",
+        "base": "Tequila",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Tequini",
+        "base": "Tequila",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Montgomery Tequini",
+        "base": "Tequila",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Extra Dry Tequini",
+        "base": "Tequila",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Churchill Tequini",
+        "base": "Tequila",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "50:50 Rum Martini",
+        "base": "Rum",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty 50:50 Rum Martini",
+        "base": "Rum",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect 50:50 Rum Martini",
+        "base": "Rum",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect 50:50 Rum Martini",
+        "base": "Rum",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet 50:50 Rum Martini",
+        "base": "Rum",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet 50:50 Rum Martini",
+        "base": "Rum",
+        "ratio": "50:50",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Wet Rum Martini",
+        "base": "Rum",
+        "ratio": "Wet",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Rum Martini",
+        "base": "Rum",
+        "ratio": "",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Montgomery Rum Martini",
+        "base": "Rum",
+        "ratio": "Montgomery",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": false,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Extra Dry Rum Martini",
+        "base": "Rum",
+        "ratio": "Extra Dry",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      },
+      {
+        "name": "Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": false,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Reverse Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Reverse Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "",
+        "dirty": true
+      },
+      {
+        "name": "Perfect Reverse Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Perfect Reverse Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Perfect",
+        "dirty": true
+      },
+      {
+        "name": "Sweet Reverse Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": false
+      },
+      {
+        "name": "Dirty Sweet Reverse Churchill Rum Martini",
+        "base": "Rum",
+        "ratio": "Churchill",
+        "reverse": true,
+        "sweetness": "Sweet",
+        "dirty": true
+      }
+    ]
 
     let base = undefined
     let ratio = undefined
@@ -2989,4 +2994,3 @@
     }
   </script>
 </html>
-
