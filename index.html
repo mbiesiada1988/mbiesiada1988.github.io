@@ -3270,7 +3270,7 @@
         ...drinks.special
       ].forEach(cocktail => {
         if (cocktail.name == el.innerHTML) {
-          document.getElementById("popup").innerHTML = `<br/>${cocktail.recipe.join('<br/>')}<br/>&nbsp;`
+          document.getElementById("popup").innerHTML = `<b>${cocktail.name}</b><br/>${cocktail.recipe.join('<br/>')}<br/>&nbsp;`
           document.getElementById("popup").style.display = "block"
         }
       })
